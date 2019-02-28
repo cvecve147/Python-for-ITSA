@@ -9,7 +9,7 @@ while True:
     try:
         l = input().split(',')
         count = list(map(int, l[3:]))
-        pre = list(itertools.permutations(count, int(l[1])))
+        pre = list(itertools.combinations(count, int(l[1])))
 
         for a in pre:
             addtemp=0
