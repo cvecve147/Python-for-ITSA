@@ -13,7 +13,7 @@ while True:
             context[temp]+=1
           # print (context[temp])
           
-    for a in range(0,32):
+    for a in range(0,26):
       if(context[a]!=0):        
         print(chr(a+65)+" : "+str(context[a]))
       if(context[a+32]!=0):

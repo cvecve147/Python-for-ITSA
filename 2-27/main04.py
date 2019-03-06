@@ -3,7 +3,6 @@ while True:
         l = input()
         ans1=int(l)
         ans2=0
-
         for a in range(0,len(l)):
             for times in range(0,(len(l)-a-1)):
                 ans1 -= int(str(ans1)[a]) * pow(10, times)
