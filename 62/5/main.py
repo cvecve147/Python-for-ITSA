@@ -21,14 +21,15 @@ while True:
                 count = 0
                 if (ans > 0):
                     break
-                while (allc < length):
-                    if (int(i[3]) > allc and int(i[2]) < allc
-                            or int(i[1]) > allc and int(i[0]) < allc):
-                        count += 1
-                        break
+                while (allc < length and count < n):
+                    for b in (0, n):
+                        if (int(i[b + 1]) >= allc and int(i[b]) <= allc):
+                            count += 1
+                            break
                     else:
+                        # print(allc)
                         allc += c
-                        if (allc > length and count == 0):
+                        if (allc >= length and count == 0):
                             ans = c
                             print(c)
 
