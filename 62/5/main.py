@@ -15,12 +15,22 @@ while True:
                 if (getlong < (int(i[b + 1]) - int(i[b]))):
                     getlong = (int(i[b + 1]) - int(i[b]))
             getlong += 1
-
+            ans = 0
             for c in range(getlong, length):
-                if (int(i[3]) >= c and int(i[2]) <= c
-                        or int(i[1]) >= c and int(i[0]) <= c):
-                    print(c)
-                    continue
+                allc = c
+                count = 0
+                if (ans > 0):
+                    break
+                while (allc < length):
+                    if (int(i[3]) > allc and int(i[2]) < allc
+                            or int(i[1]) > allc and int(i[0]) < allc):
+                        count += 1
+                        break
+                    else:
+                        allc += c
+                        if (allc > length and count == 0):
+                            ans = c
+                            print(c)
 
     except (EOFError):
         break
